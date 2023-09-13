@@ -40,3 +40,22 @@ export const LandingImage = styled.Image`
     height: 250px; 
     width: 250px; 
 `
+
+export const ButtonContainer = styled.View`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+
+`
+
+export const LoginButton = styled.TouchableOpacity`
+`
+
+export const RegisterButton = styled.TouchableOpacity`
+
+`
+
+export const ButtonText = styled.Text`
+
+`
