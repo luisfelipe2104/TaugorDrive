@@ -6,13 +6,15 @@ import { LandingContainer, ImageContainer, LandingTitle, TitleContainer, ButtonC
 export default function LandingScreen() {
   return (
     <LandingContainer>
-        <TitleContainer>
-            <LandingTitle>Taugor Drive</LandingTitle>
-        </TitleContainer>
+        <View>
+          <TitleContainer>
+              <LandingTitle>Taugor Drive</LandingTitle>
+          </TitleContainer>
 
-        <ImageContainer>
-            <LandingImage source={landingImg} />
-        </ImageContainer>
+          <ImageContainer>
+              <LandingImage source={landingImg} />
+          </ImageContainer>
+        </View>
 
         <TextContainer>
             <LandingText>Welcome to Taugor Drive!</LandingText>

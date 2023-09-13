@@ -3,10 +3,14 @@ import styled from "styled-components/native";
 export const LandingContainer = styled.View`
     display: flex;
     align-items: center;
+    min-height: 95%;
+    justify-content: space-around;
 `
 
 export const TitleContainer = styled.View`
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    display: flex;
+    align-items: center;
 `
 
 export const LandingTitle = styled.Text`
@@ -29,7 +33,6 @@ export const DetailText = styled.Text`
     font-size: 21px;
     font-weight: 600;
     text-align: center;
-    text-decoration: dashed;
 `
 
 export const ImageContainer = styled.View`
@@ -44,18 +47,31 @@ export const LandingImage = styled.Image`
 export const ButtonContainer = styled.View`
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
 
 `
 
 export const LoginButton = styled.TouchableOpacity`
+    background-color: #1b2536;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const RegisterButton = styled.TouchableOpacity`
-
+    background-color: #608bd1;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 export const ButtonText = styled.Text`
-
+    font-size: 20px;
+    color: #FFF;
+    font-weight: 700;
 `
