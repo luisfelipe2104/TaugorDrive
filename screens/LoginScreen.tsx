@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, TouchableOpacity } from 'react-native'
-import { Container, MessageContainer, MessageTitle, Message, ForgotPasswordText, InputContainer, Input, ContainerButton, SubmitButton, ButtonText, CenteredView, GoogleButton, GoogleImage, NavigationMessage, BlueText, NavigationTextContainer } from '../components/LoginComponents'
+import { Container, MessageContainer, MessageTitle, Message, ForgotPasswordText, InputContainer, Input, ContainerButton, SubmitButton, ButtonText, CenteredView, GoogleButton, GoogleImage, NavigationMessage, BlueText, NavigationTextContainer } from '../components/AuthComponents'
 import { Entypo } from '@expo/vector-icons';
 import googleIcon from '../assets/googleIcon.png'
 
@@ -18,6 +18,7 @@ export default function LoginScreen() {
             />
             <Input 
                 placeholder='Password'
+                secureTextEntry={true}
             />
         </InputContainer>
 
