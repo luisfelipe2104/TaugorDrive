@@ -4,7 +4,7 @@ import { Container, MessageContainer, MessageTitle, Message, ForgotPasswordText,
 import { Entypo } from '@expo/vector-icons';
 import googleIcon from '../assets/googleIcon.png'
 
-export default function RegisterScreen() {
+export default function RegisterScreen({ navigation } : any) {
   return (
     <Container>
         <MessageContainer>
@@ -39,7 +39,7 @@ export default function RegisterScreen() {
             <NavigationMessage>
                 Already have an account? 
             </NavigationMessage>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                 <BlueText> Login</BlueText>
             </TouchableOpacity>
         </NavigationTextContainer>

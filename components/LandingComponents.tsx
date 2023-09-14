@@ -54,6 +54,7 @@ export const ButtonContainer = styled.View`
 
 export const LoginButton = styled.TouchableOpacity`
     background-color: #1b2536;
+    border-radius: 10px;
     width: 120px;
     height: 50px;
     display: flex;
@@ -63,6 +64,7 @@ export const LoginButton = styled.TouchableOpacity`
 
 export const RegisterButton = styled.TouchableOpacity`
     background-color: #608bd1;
+    border-radius: 10px;
     width: 120px;
     height: 50px;
     display: flex;
