@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
+import { DataContext } from './contexts/DataContext'
 import LandingScreen from './screens/LandingScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import LoginScreen from './screens/LoginScreen'
@@ -11,8 +12,13 @@ import { auth } from './firebaseConfig'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 const Stack = createNativeStackNavigator();
 
+type ContextType = {
+    loggedIn: boolean;
+    setLoggedIn: (loggedIn: boolean) => void;
+};
+
 export default function Routes() {
-    const [loggedIn, setLoggedIn] = useState(false)
+    const { loggedIn, setLoggedIn } : any = useContext(DataContext)
     const [loaded, setLoaded] = useState(false)
     
     useEffect(() => {
