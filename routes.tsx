@@ -5,17 +5,13 @@ import RegisterScreen from './screens/RegisterScreen'
 import LoginScreen from './screens/LoginScreen'
 import HomeScreen from './screens/HomeScreen'
 import UploadScreen from './screens/UploadScreen'
+import ResultsScreen from './screens/ResultsScreen'
 
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebaseConfig'
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 const Stack = createNativeStackNavigator();
-
-type ContextType = {
-    loggedIn: boolean;
-    setLoggedIn: (loggedIn: boolean) => void;
-};
 
 export default function Routes() {
     const { loggedIn, setLoggedIn } : any = useContext(DataContext)
@@ -46,6 +42,7 @@ export default function Routes() {
             <Stack.Navigator initialRouteName='Home'>
                 <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}} />
                 <Stack.Screen name="Upload" component={UploadScreen} options={{headerShown: false}} />
+                <Stack.Screen name="Results" component={ResultsScreen} options={{headerShown: false}} />
             </Stack.Navigator>
         )
     }

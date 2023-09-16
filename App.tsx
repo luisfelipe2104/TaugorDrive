@@ -10,7 +10,7 @@ export default function App() {
       <NavigationContainer>
         <DataProvider>
           <Routes />
-          <StatusBar style="auto" />
+          <StatusBar backgroundColor="#000" />
         </DataProvider>
       </NavigationContainer>
   );
