@@ -18,3 +18,35 @@ export const UploadButtonText = styled.Text`
     font-weight: bold;
     color: #fff;
 `
+
+export const FileContainer = styled.View`
+    background-color: #e81a3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+`
+
+export const FileType = styled.Text`
+    font-size: 45px;
+    font-weight: 900;
+`
+
+export const FileName = styled.TextInput`
+    text-align: left;
+    margin-top: 3px;
+    border: 0.5px solid #9e9e9e;
+    padding: 1px 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    width: 250px;
+`
+
+export const FileSize = styled.Text`
+    position: relative;
+    top: 75px;
+    left: 82px;
+    font-size: 18px;
+`
