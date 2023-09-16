@@ -7,6 +7,25 @@ export const Container = styled.View`
     min-height: 100%;
 `
 
+export const Header = styled.View`
+    padding: 40px 10px 20px;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+`
+
+export const Button = styled.TouchableOpacity`
+    background-color: #025dbf;
+    padding: 7px 12px;
+    border-radius: 10px;
+`
+
+export const ButtonText = styled.Text`
+    color: #FFF;
+    font-size: 20px;
+`
+
 export const UploadButton = styled.TouchableOpacity`
     background-color: #025dbf;
     padding: 15px 50px;
@@ -21,6 +40,7 @@ export const UploadButtonText = styled.Text`
 
 export const FileContainer = styled.View`
     background-color: #e81a3f;
+    margin-top: -50%;
     display: flex;
     justify-content: center;
     align-items: center;
