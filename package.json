@@ -11,7 +11,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/native-stack": "^6.9.13",
-    "axios": "^1.4.0",
+    "axios": "0.24.0 ",
     "expo": "~49.0.10",
     "expo-document-picker": "^11.7.0",
     "expo-file-system": "^15.6.0",

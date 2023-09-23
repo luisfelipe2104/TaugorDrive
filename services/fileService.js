@@ -3,11 +3,11 @@ import { api } from "./api";
 
 export async function uploadFile(selectedFile) {
     const formData = new FormData();
-    formData.append('fileData', {
+    formData.append('formData', {
         uri : selectedFile.uri,
         type: selectedFile.mimeType,
         name: selectedFile.name
-    });
+    })
 
     try{
         const { data } = await api.post(`/api/file`, formData)
