@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import { View, Text } from 'react-native'
 import { Button, ButtonText, Container, FileContainer, FileName, FileSize, FileType, Header, UploadButton, UploadButtonText } from '../components/UploadComponents'
 import * as DocumentPicker from 'expo-document-picker';
+import { DocumentPickerAsset } from 'expo-document-picker';
+import { uploadFile } from '../services/fileService';
 
 type size = number | undefined
 type fileType = string | undefined
 
 export default function UploadScreen() {
   const [isFileSelected, setIsFileSelected] = useState(false)
+  const [selectedFile, setSelectedFile] = useState<DocumentPickerAsset>()
   const [fileName, setFileName] = useState("")
   const [fileSize, setFileSize] = useState<size>(0)
   const [fileType, setFileType] = useState<fileType>("")
@@ -17,6 +20,7 @@ export default function UploadScreen() {
       copyToCacheDirectory: true
     });
     if (result.assets) {
+      setSelectedFile(result.assets[0])
       setFileName(result.assets[0].name);
       setFileSize(result.assets[0].size ? result.assets[0].size * 0.000001 : result.assets[0].size)
       setFileType(result.assets[0].mimeType ? result.assets[0].mimeType.split("/")[1] : result.assets[0].mimeType)
@@ -25,6 +29,10 @@ export default function UploadScreen() {
       console.log(result);
     }
     console.log();
+  }
+
+  const handleFileSubmit = async () => {
+    uploadFile(selectedFile)
   }
 
   if (isFileSelected) {
@@ -44,7 +52,7 @@ export default function UploadScreen() {
             <ButtonText>Cancel</ButtonText>
           </Button>
 
-          <Button>
+          <Button onPress={() => handleFileSubmit()}>
             <ButtonText>Upload</ButtonText>
           </Button>
         </Header>
